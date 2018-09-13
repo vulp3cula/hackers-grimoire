@@ -4,4 +4,5 @@
 * [Reconnaissance](recon.md)
   * [Passive information gathering](passive-information-gathering.md)
   * [Active information gathering](active-information-gathering.md)
+* [Privilege escalation: Linux](privesc-linux)
 * [Password cracking](password-cracking.md)
