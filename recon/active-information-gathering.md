@@ -68,11 +68,11 @@ nmap -A [host]
 
 ### Nmap scripting engine \(NSE\)
 
-The NSE is both powerful and flexible and scripts can be used to automate a variety of tasks from network discovery to vulnerability detection.
+NSE is awesome too, its scripts can be used to detect a variety of vulnerabilities.
 
 #### Running NSE scripts
 
-Use the following command with the script name and target to execute the script:
+General usage:
 
 ```text
 nmap --script=[scriptname] [host]
@@ -144,7 +144,7 @@ ls -l /usr/share/nmap/scripts/citrix*
 
 #### Nmap script help
 
-Many scripts require different parameters and options to function. Most scripts have a help function and instructions can be printed to the terminal using `--script-help` followed by the script name:
+Most scripts have a help function that displays instructions when you type `--script-help` :
 
 ```text
 nmap --script-help ftp-anon
@@ -194,7 +194,7 @@ Versions:
 
 When clients and servers use different operating systems and SMB versions, the highest supported version will be used for communication. For example, when a Windows 8.1 client communicates with a Windows Server 2016 server, they will use SMB 3.0.2.
 
-Legacy versions of SMB have created many opportunities for hackers due to their security vulnerabilities. A recent example of an SMB vulnerability in modern Windows operating systems is [CVE-2017-0143](https://www.rapid7.com/db/vulnerabilities/msft-cve-2017-0143). This remote code execution \(RCE\) vulnerability affects all Windows OSes from XP to Server 2016. Exploits for this vulnerability are believed to have been stolen from the NSA and then leaked to the public a group called the [Shadow Brokers](https://en.wikipedia.org/wiki/The_Shadow_Brokers).
+Legacy versions of SMB have created many opportunities for hackers due to their security vulnerabilities. A recent example of an SMB vulnerability in modern Windows operating systems is [CVE-2017-0143](https://www.rapid7.com/db/vulnerabilities/msft-cve-2017-0143). This remote code execution \(RCE\) vulnerability affects all Windows OSes from XP to Server 2016. Exploits for this vulnerability are believed to have been stolen from the NSA and then leaked by the [Shadow Brokers](https://en.wikipedia.org/wiki/The_Shadow_Brokers).
 
 Even though Windows XP and Windows Server 2003 are no longer supported by Microsoft, there are many systems vulnerable to MS08-067 \(e.g. hospital devices\).
 
