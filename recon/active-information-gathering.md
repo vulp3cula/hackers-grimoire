@@ -168,13 +168,7 @@ nmap --script-updatedb
 
 To-do
 
-#### Nmap SNMP scripts
 
-List the SNMP scripts installed on your system:
-
-```text
-ls -l /usr/share/nmap/scripts/snmp*
-```
 
 ## SMB enumeration
 
