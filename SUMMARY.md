@@ -6,8 +6,9 @@
   * [Active information gathering](recon/active-information-gathering.md)
 * [Vulnerability analysis](vuln-analysis/README.md)
 * [Exploitation](exploitation/README.md)
+  * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
-* [Password cracking](password-cracking.md)
+
 
