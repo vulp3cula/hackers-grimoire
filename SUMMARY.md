@@ -1,8 +1,8 @@
 # Table of contents
 
 * [The Hacker's Grimoire](README.md)
-* [Reconnaissance](recon.md)
-  * [Passive information gathering](passive-information-gathering.md)
-  * [Active information gathering](active-information-gathering.md)
+* [Reconnaissance](recon/recon.md)
+  * [Passive information gathering](recon/passive-information-gathering.md)
+  * [Active information gathering](recon/active-information-gathering.md)
 * [Privilege escalation: Linux](privesc-linux.md)
 * [Password cracking](password-cracking.md)
