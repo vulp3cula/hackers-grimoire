@@ -39,17 +39,34 @@ PHPbb: /var/www/config.php
 ### Windows
 Files that may exist on Windows systems:
 ```
-C:/windows/System32/drivers/etc/hosts
-C:/Windows/Panther/Unattend/Unattended.xml
-C:/Windows/Panther/Unattended.xml
+c:\WINDOWS\system32\eula.txt
+c:\boot.ini  
+c:\WINDOWS\win.ini  
+c:\WINNT\win.ini  
+c:\WINDOWS\Repair\SAM  
+c:\WINDOWS\php.ini  
+c:\WINNT\php.ini  
+c:\Program Files\Apache Group\Apache\conf\httpd.conf  
+c:\Program Files\Apache Group\Apache2\conf\httpd.conf  
+c:\Program Files\xampp\apache\conf\httpd.conf  
+c:\php\php.ini  
+c:\php5\php.ini  
+c:\php4\php.ini  
+c:\apache\php\php.ini  
+c:\xampp\apache\bin\php.ini  
+c:\home2\bin\stable\apache\php.ini  
+c:\home\bin\stable\apache\php.ini
 ```
-**XAMPP**
-Interesting XAMPP files on Windows:
+The system and SAM files might be in different locations. As well, the path might be case-sensitive, even though it's Windows. 
 ```
-C:/xampp/apache/conf/httpd.conf
-C:/xampp/security/webdav.htpasswd
-C:/xampp/apache/logs/access.log
-C:/xampp/apache/logs/error.log
+# SYSTEMROOT is usually windows
+windows\repair\SAM
+%SYSTEMROOT%\repair\SAM
+%SYSTEMROOT%\System32\config\RegBack\SAM
+%SYSTEMROOT%\System32\config\SAM
+%SYSTEMROOT%\repair\system
+%SYSTEMROOT%\System32\config\SYSTEM
+%SYSTEMROOT%\System32\config\RegBack\system
 ```
 ## Techniques
 
@@ -107,3 +124,7 @@ backslash       %c0%5c  %c0%80%5c  etc.
 ```
 
 ### Null-byte injection
+
+## Further reading
+* [Local File Inclusion by xapax](https://xapax.gitbooks.io/security/content/local_file_inclusion.html)
+* [Bypassing filters for path traversal](https://tipstrickshack.blogspot.com/2013/02/how-to-bypassing-filter-to-traversal_8831.html)
