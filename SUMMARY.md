@@ -5,6 +5,7 @@
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
 * [Vulnerability analysis](vuln-analysis/README.md)
+  * [Web application attacks](vuln-analysis/web-application/README.md)
 * [Exploitation](exploitation/README.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
