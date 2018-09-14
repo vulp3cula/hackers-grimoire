@@ -6,6 +6,7 @@
   * [Active information gathering](recon/active-information-gathering.md)
 * [Vulnerability analysis](vuln-analysis/README.md)
   * [Web application attacks](vuln-analysis/web-application/README.md)
+  * [Local and remote file inclusion](vuln-analysis/web-application/lfi-rfi.md)
 * [Exploitation](exploitation/README.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
