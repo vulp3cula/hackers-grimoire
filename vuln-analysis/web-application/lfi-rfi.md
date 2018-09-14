@@ -124,6 +124,17 @@ backslash       %c0%5c  %c0%80%5c  etc.
 ```
 
 ### Null-byte injection
+Some applications check whether the user-supplied file name ends in a particular file type or set of file types, and reject attempts to access anything else. A null byte terminator (`%00` or `0x00` in hex) added to the LFI/RFI parameter will stop processing immediately, so that any bytes following it are ignored.
+
+In the following code example, the extension `.php` added to the file request variable `$file`:
+```
+$file = $_GET['page'];
+require_once("/var/www/$file.php");
+```
+Requesting `/etc/passwd` in this case will not work because the request becomes `passwd.php` resulting in a 404 error. However, if we add a null byte to the passwd file name it will terminate at the end of `passwd` and discard the remaining bytes:
+```
+http://website/page=../../../etc/passwd%00
+```
 
 ## Further reading
 * [Local File Inclusion by xapax](https://xapax.gitbooks.io/security/content/local_file_inclusion.html)
