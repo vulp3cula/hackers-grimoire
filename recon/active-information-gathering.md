@@ -16,7 +16,7 @@ netdiscover -r 192.168.1.1/24
 
 ### Nmap
 
-Nmap is an incredibly powerful and useful tool for host and service enumeration. There are many commands and options, but below are some commonly used ones which work well in both lab and penetration testing scenarios.
+Nmap is awesome. There are many commands and options, but below are some commonly used ones which work well in both lab and penetration testing scenarios.
 
 Nmap is a command-line tool but has a user-friendly GUI version called [Zenmap](https://nmap.org/zenmap/), available for all major OS platforms. Zenmap also has preconfigured commands for common scans.
 
