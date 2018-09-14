@@ -64,7 +64,7 @@ Aggressive scan:
 nmap -A [host]
 ```
 
-**Warning:** When the aggressive option is used together with the all ports `-p` option, the scan will take a while but provide a lot of information. However, this scan will also generate a lot of network traffic and/or crash unstable services on the target host. It might also be rate-limited by hosts or firewalls, increasing scan time to the point where it might never finish. A good approach is to start with light, quick scans and then move to more intense scans as needed.
+**Warning:** Big, nasty scans are great for labs, but sometimes get rate-limited. In real life settings, it's even worse. Start with light scans and do targeted scans when you discover something interesting. 
 
 ### Nmap scripting engine \(NSE\)
 
