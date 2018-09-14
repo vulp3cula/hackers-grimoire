@@ -246,3 +246,4 @@ To-do
 
 * [http://www.technicalinfo.net/papers/PassiveInfoPart1.html](http://www.technicalinfo.net/papers/PassiveInfoPart1.html)
 * [https://blog.bugcrowd.com/discovering-subdomains](https://blog.bugcrowd.com/discovering-subdomains)
+

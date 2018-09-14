@@ -19,3 +19,4 @@ There are many sources for passive enumeration, including:
 ## Active information gathering
 
 Enumeration is the process of retrieving usernames, shares, services, web directories, groups, and computers on a network to better understand the attack surface before a penetration test. A critical part of the enumeration process involves port scanning, service enumeration and OS fingerprinting. This allows an ethical hacker to identify vulnerabilities that might be exploited, such as unpatched web server software. Wherever possible, all TCP and UDP ports should be scanned, since many services can reside on higher ports, including common ones like **ssh**.
+
