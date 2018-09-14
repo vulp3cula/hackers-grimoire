@@ -7,6 +7,7 @@
 * [Vulnerability analysis](vuln-analysis/README.md)
   * [Web application attacks](vuln-analysis/web-application/README.md)
     * [Local and remote file inclusion](vuln-analysis/web-application/lfi-rfi.md)
+    * [Remote code execution](vuln-analysis/web-application/rce.md)
     * [Web shells](vuln-analysis/web-application/web-shells.md)
 * [Exploitation](exploitation/README.md)
   * [Password cracking](exploitation/password-cracking.md)
