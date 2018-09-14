@@ -443,12 +443,10 @@ Enumerate users:
 wpscan --url [http://host] --enumerate u
 ```
 
-## References
+## Further reading
 
-* [https://nmap.org/book/man-port-scanning-techniques.html](https://nmap.org/book/man-port-scanning-techniques.html)
-* [https://nmap.org/book/nse.html](https://nmap.org/book/nse.html)
-* [https://blogs.technet.microsoft.com/johnla/2015/09/26/the-inside-story-behind-ms08-067/](https://blogs.technet.microsoft.com/johnla/2015/09/26/the-inside-story-behind-ms08-067/)
-* [https://www.tldp.org/HOWTO/SMB-HOWTO-8.html](https://www.tldp.org/HOWTO/SMB-HOWTO-8.html)
-* [https://cirt.net/nikto2-docs/options.html\#id2791140](https://cirt.net/nikto2-docs/options.html#id2791140)
-* [https://wpscan.org/](https://wpscan.org/)
+* [Nmap port scanning techniques](https://nmap.org/book/man-port-scanning-techniques.html)
+* [Nmap scripting engine](https://nmap.org/book/nse.html)
+* [The story behind MS08-067](https://blogs.technet.microsoft.com/johnla/2015/09/26/the-inside-story-behind-ms08-067/)
+* [SMB cheat sheet](https://www.tldp.org/HOWTO/SMB-HOWTO-8.html)
 
