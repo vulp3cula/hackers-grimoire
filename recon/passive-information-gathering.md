@@ -14,16 +14,6 @@ Important records for enumeration include:
 * **Pointer Records \(PTR\)** map an IPv4 address to the CNAME on the host, aka ‘reverse record’ because it connects a record with an IP address to a hostname instead of the other way around
 * **TXT records** may include additional information \(e.g. configuration\)
 
-Some tools used for DNS enumeration included with Kali Linux are:
-
-* whois
-* nslookup
-* host
-* dig
-* Fierce
-* DNSenum
-* DNSrecon
-
 ### Whois
 
 A whois lookup can be used to get general information about the domain such as the registrar, domain owner, their contact information and DNS server:
@@ -34,19 +24,19 @@ whois google.com
 
 ### Nslookup
 
-nslookup stands for Name Server lookup, used for querying the domain name system in order to obtain DNS records:
+Nslookup \(Name Server lookup\) is used for querying the domain name system for DNS records:
 
 ```text
 nslookup google.com
 ```
 
-You can query DNS records using the option -type= followed by the DNS record type like this:
+Query DNS records using the option -type= followed by the DNS record type:
 
 ```text
 nslookup -type=A google.com
 ```
 
-You can use ‘any’ as DNS record type to return all DNS records for the domain:
+Use ‘any’ as DNS record type to return all DNS records for the domain:
 
 ```text
 nslookup -type=any google.com
@@ -66,11 +56,9 @@ host google.com
 
 #### Zone transfers
 
-DNS is critical component for ensuring that applications are available and work properly. For this reason, they usually have redundant/secondary servers which must be synced to each other. This replication mechanism for DNS databases \(which contain DNS records\) is known as a **zone transfer**. A zone transfer occurs when the information from the primary DNS server is replicated on one or more secondary DNS servers.
+DNS servers usually have redundant/secondary servers which must be synced to each other. The replication method is called a **zone transfer**. DNS servers with zone transfers enabled to the public can reveal staging servers, business applications, VOIP servers and other assets which would not be discovered through brute force techniques. Zone transfers are typically disabled for DNS servers, but it is still worth checking.
 
-Zone transfers can unintentionally leak sensitive information to an attacker. For example, a DNS zone may reveal a complete list of all hosts for a given zone, including hostnames, providing a larger attack surface. DNS servers with zone transfers enabled to the public can reveal staging servers, business applications, VOIP servers and other assets which would not be discovered through brute force techniques. Zone transfers are typically disabled for DNS servers, but it is still worth checking with tools like **Host** or **Fierce**, just in case.
-
-To check for zone transfer capability using host, use this command to retrieve the name server:
+Check for zone transfer capability using host, use this command to retrieve the name server:
 
 ```text
 host -t ns google.com
@@ -86,7 +74,7 @@ host -t axfr -l google.com ns1.google.com
 
 Dig \(short for Domain Information Groupr\) is a tool to query DNS servers that works like Host.
 
-For example, to retrieve MX records for the google.com domain:
+Retrieve MX records for the google.com domain:
 
 ```text
 dig -t mx google.com
@@ -106,15 +94,17 @@ dig axfr @nsztm1.digi.ninja zonetransfer.me
 
 ### Fierce
 
-Fierce is a reconnaissance tool which uses DNS to identify targets inside and outside corporate networks.
+Fierce uses DNS to identify targets inside and outside corporate networks.
 
-Type `fierce -h` for a list of options and usage instructions:
+Type `fierce -h` for help \(this works for most things\):
 
 ```text
 fierce -dns google.com
 ```
 
-With this command, Fierce will attempt to locate the name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist. A custom wordlist can be specified with the following command:
+Fierce will attempt to locate the name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist. 
+
+To specify a custom wordlist:
 
 ```text
 fierce -dns google.com –wordlist /path/to/wordlist/
