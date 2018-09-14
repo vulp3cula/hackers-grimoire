@@ -1,7 +1,7 @@
 # Local and remote file inclusion
 Local file inclusion (LFI) vulnerabilities allow an attacker to read local files on the web server using malicious web requests. These files can include web configuration files, log files, password files and other sensitive system data. LFI can also be used for remote code execution (RCE). In most cases, this vulnerability is due to poor input sanitization.
 
-Remote file inclusions is similar, but the attacker is taking advantage of the web server's ability to call local files, and using it to upload files from remote servers. These remote files can be malicious code that executes in the context of the web server user (e.g. www-data).
+Remote file inclusions are similar, but the attacker is taking advantage of the web server's ability to call local files, and using it to upload files from remote servers. These remote files can be malicious code that executes in the context of the web server user (e.g. www-data).
 
 ## Interesting files
 If an LFI vulnerability exists, look for these files:
