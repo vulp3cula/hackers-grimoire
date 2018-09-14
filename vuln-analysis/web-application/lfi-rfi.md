@@ -148,3 +148,4 @@ http://[attack host]/folder/reverseshell.php
 ## Further reading
 * [Local File Inclusion by xapax](https://xapax.gitbooks.io/security/content/local_file_inclusion.html)
 * [Bypassing filters for path traversal](https://tipstrickshack.blogspot.com/2013/02/how-to-bypassing-filter-to-traversal_8831.html)
+* [LFI to RCE with Perl script](https://www.exploit-db.com/papers/12992/)
