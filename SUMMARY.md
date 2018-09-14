@@ -5,4 +5,4 @@
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
 * [Privilege escalation: Linux](privesc-linux.md)
-* [Password cracking](post-exploitation/password-cracking.md)
+  * [Password cracking](post-exploitation/password-cracking.md)
