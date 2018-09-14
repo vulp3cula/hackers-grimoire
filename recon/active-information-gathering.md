@@ -4,7 +4,7 @@
 
 Finding live hosts on a network and is one of the first steps in network reconnaissance. Discovering as many live hosts as possible, including hidden ones, maximizes opportunities for exploitation.
 
-There are several tools for host discovery that use a variety of techniques. Being familiar with multiple tools and command options is helpful because network conditions vary and not all scans will return consistent results.
+Being familiar with multiple tools and command options is helpful because network conditions vary and not all scans will return consistent results.
 
 ### Netdiscover
 
