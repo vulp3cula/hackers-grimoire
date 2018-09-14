@@ -4,7 +4,7 @@
 * [Reconnaissance](recon/README.md)
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
-* [Vulnerability analysis](vuln-analysis.md)
+* [Vulnerability analysis](vuln-analysis/README.md)
 * [Exploitation](exploitation/README.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
