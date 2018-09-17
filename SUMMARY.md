@@ -11,6 +11,7 @@
     * [Web shells](vuln-analysis/web-application/web-shells.md)
 * [Exploitation](exploitation/README.md)
   * [Password cracking](exploitation/password-cracking.md)
+  * [Shells](exploitation/shells.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
