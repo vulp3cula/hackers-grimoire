@@ -164,13 +164,25 @@ Once the script has downloaded, use the following command to update the Nmap scr
 nmap --script-updatedb
 ```
 
-### Nessus
+### FTP
+Check if anonymous FTP access is available:
 
-To-do
+```
+ftp [host]
+Username: anonymous
+Password: anything
+```
+Test if you can navigate, list, read, get or put files:
+```
+cd ..          # move up one directory
+pwd            # print working directory
+dir -C         # list files
+mkdir [folder] # make a directory
+get [file]     # get a file
+put [file]     # send a file 
+```
 
-
-
-## SMB enumeration
+## SMB
 
 Server Message Block \(SMB\) is a network file sharing protocol that provides access to shared files and printers on a local network.
 
