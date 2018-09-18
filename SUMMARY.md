@@ -8,7 +8,7 @@
   * [Web application attacks](exploitation/web-application/README.md)
     * [Local and remote file inclusion](exploitation/web-application/lfi-rfi.md)
     * [File upload bypass](exploitation/web-application/file-upload-bypass.md)
-  * [Remote code execution](exploitation/rce.md)
+    * [Remote code execution](exploitation/rce.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
