@@ -164,7 +164,7 @@ Once the script has downloaded, use the following command to update the Nmap scr
 nmap --script-updatedb
 ```
 ### Detecting WAF
-Web application firewall may drop malicious, such as those with SQL injections, or otherwise interfere with enumeration or testing:
+Web application firewalls (WAF) may drop malicious requests, such as those with SQL injections, or otherwise interfere with enumeration or testing:
 
 Detect WAF using NMAP:
 ```
