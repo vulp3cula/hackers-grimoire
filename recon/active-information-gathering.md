@@ -469,4 +469,5 @@ wpscan --url [http://host] --enumerate u
 * [Nmap scripting engine](https://nmap.org/book/nse.html)
 * [The story behind MS08-067](https://blogs.technet.microsoft.com/johnla/2015/09/26/the-inside-story-behind-ms08-067/)
 * [SMB cheat sheet](https://www.tldp.org/HOWTO/SMB-HOWTO-8.html)
+* [WAF detection and bypass](http://securityidiots.com/Web-Pentest/WAF-Bypass/waf-bypass-guide-part-1.html)
 
