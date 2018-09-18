@@ -9,6 +9,7 @@
     * [Local and remote file inclusion](exploitation/web-application/lfi-rfi.md)
     * [File upload bypass](exploitation/web-application/file-upload-bypass.md)
     * [Cross site scripting](exploitation/web-application/xss.md)
+    * [SQL injection](exploitation/web-application/sql-injection.md)
     * [Remote code execution](exploitation/rce.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
