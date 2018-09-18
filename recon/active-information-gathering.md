@@ -163,7 +163,21 @@ Once the script has downloaded, use the following command to update the Nmap scr
 ```text
 nmap --script-updatedb
 ```
+### Detecting WAF
+Web application firewall may drop malicious, such as those with SQL injections, or otherwise interfere with enumeration or testing:
 
+Detect WAF using NMAP:
+```
+nmap -p80 --script http-waf-detect [host]
+```
+Fingerprint WAF using NMAP:
+```
+nmap -p80 --script http-waf-fingerprint [host]
+```
+Fingerprint WAF using WAFw00f:
+```
+wafw00f.py [url]
+```
 ### FTP
 Check if anonymous FTP access is available:
 
