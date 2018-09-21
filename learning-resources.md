@@ -17,7 +17,8 @@ Another great site to practice hacking techniques, but I wouldn't recommend it f
 ## Books
 I like learning from books, so I bought a lot of them. Most of them were useful right away, some became useful only after I'd learned some fundamentals.
 
-#### [CompTIA Security+ All-in-One Exam Guide, Fourth Edition](https://www.amazon.com/CompTIA-Security-Guide-Fourth-SY0-401/dp/0071841245)
+**[CompTIA Security+ All-in-One Exam Guide, Fourth Edition](https://www.amazon.com/CompTIA-Security-Guide-Fourth-SY0-401/dp/0071841245)**
+
 I passed Security+ a couple of months after I started working in cybersecurity, and this book was a huge help. You can check out [my study notes here](https://docs.google.com/document/d/1na4k4uGhpQA30pd02DrLYe2r2ukBwzUQ_CcA52Jn7Zs/edit?usp=sharing). Even if you don't take the exam, this book is a great overview of different security disciplines. It helps you understand where penetration testing and red teaming fit in with areas like compliance, physical security and enterprise governance. If you're studying for Security+, you should probably check out a [later edition](https://www.amazon.com/CompTIA-Security-Guide-Fifth-SY0-501/dp/1260019322/ref=pd_lpo_sbs_14_t_1?_encoding=UTF8&psc=1&refRID=KBMRK6TWZK5PVTADXDJC).
 
 [CompTIA Network+ Certification All-in-One Exam Guide, Seventh Edition](https://www.amazon.com/CompTIA-Network-Certification-Seventh-N10-007/dp/1260122387/)
