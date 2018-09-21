@@ -2,9 +2,7 @@
 
 ## DNS enumeration
 
-Domain Name System \(DNS\) enumeration is the process of identifying the DNS servers and records associated with a target.
-
-Important records for enumeration include:
+Domain Name System \(DNS\) enumeration is the process of identifying the DNS servers and records associated with a target:
 
 * **Address \(A\)** records containing the IP addresses for domains
 * **Mail Exchange \(MX\)** records containing mail addresses
