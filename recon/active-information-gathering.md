@@ -207,7 +207,7 @@ put [file]     # send a file
 
 ## SMB
 
-Server Message Block \(SMB\) is a network file sharing protocol that provides access to shared files and printers on a local network.
+Server Message Block \(SMB\) is a network file sharing protocol that provides access to shared files and printers on a local network. Older versions of SMB tend to be vulnerable to major exploits, such as EternalBlue.
 
 Versions:
 
@@ -221,12 +221,6 @@ Versions:
 | SMB 3.0.2 | Windows 8.1 and Windows Server 2012 R2 |
 | SMB 3.1.1 | Windows 10 and Windows Server 2016 |
 
-When clients and servers use different operating systems and SMB versions, the highest supported version will be used for communication. For example, when a Windows 8.1 client communicates with a Windows Server 2016 server, they will use SMB 3.0.2.
-
-Legacy versions of SMB have created many opportunities for hackers due to their security vulnerabilities. A recent example of an SMB vulnerability in modern Windows operating systems is [CVE-2017-0143](https://www.rapid7.com/db/vulnerabilities/msft-cve-2017-0143). This remote code execution \(RCE\) vulnerability affects all Windows OSes from XP to Server 2016. Exploits for this vulnerability are believed to have been stolen from the NSA and then leaked by the [Shadow Brokers](https://en.wikipedia.org/wiki/The_Shadow_Brokers).
-
-Even though Windows XP and Windows Server 2003 are no longer supported by Microsoft, there are many systems vulnerable to MS08-067 \(e.g. hospital devices\).
-
 SMB uses these ports, which can be discovered using Nmap scans:
 
 * netbios-ns 137/tcp - NETBIOS Name Service
@@ -239,9 +233,7 @@ SMB uses these ports, which can be discovered using Nmap scans:
 
 ### SMBclient
 
-Linux/Unix machines can browse and mount SMB shares.
-
-An SMB client program for UNIX machines is included with the Samba distribution. It provides an ftp-like interface on the command line. You can use this utility to transfer files between a Windows 'server' and a Linux client.
+Linux/Unix machines can browse and mount SMB shares, and transfer files.
 
 To see which shares are available on a given host:
 
@@ -302,7 +294,7 @@ nmap -p 445 [host] --script=smb-vuln-ms17-010
 
 ### Rpcclient
 
-Rpcclient is a Linux tool used for client-side MS-RPC functions \(port 445\) using a null session, a connection that does not require a password. Null sessions were enabled by default on legacy systems but have since been disabled from Windows XP SP2 and Windows Server 2003. Nowadays it is an uncommon misconfiguration, but might be worth trying.
+Rpcclient is a Linux tool used for client-side MS-RPC functions \(port 445\) using a null session, a connection that does not require a password. Null sessions were enabled by default on legacy systems but have since been disabled from Windows XP SP2 and Windows Server 2003. 
 
 ```text
 rpcclient -U "" [host]
@@ -335,9 +327,7 @@ enum4linux [host]
 
 ## Website scanning
 
-The most common and popular web servers are are Apache \(+variants\) and Microsoft IIS. They have a wide range of vulnerabilities varying from local and remote file inclusion to remote code execution and DoS attacks.
-
-Attackers often look for web server vulnerabilities in order to get command execution \(shell\) on the host. Examples include uploading a web shell to the directory, or reading web configuration and system files by abusing parameters.
+Web servers are a common target for hackers, because they can be used to get a foothold on the system \(e.g. shell\) or even an organization's network. Scanning is usually detectable, but also can identify opportunities for further exploitation.
 
 ### Nikto
 
@@ -414,7 +404,7 @@ Wordlists are located here:
 
 ### WPScan
 
-WordPress is a popular website/blogging platform and is frequently targeted by hackers. Vulnerabilities are typically introduced through community-developed modules and themes. WPScan is a tool that scans for a variety of vulnerabilities and can also enumerate users.
+WordPress is a popular website/blogging platform and is frequently targeted by hackers. Vulnerabilities are typically introduced through community-developed modules and themes. WPScan is a tool that scans for a variety of module/theme vulnerabilities and can also enumerate users.
 
 Update WPScan with the latest information:
 
