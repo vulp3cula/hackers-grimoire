@@ -10,7 +10,7 @@
     * [File upload bypass](exploitation/web-application/file-upload-bypass.md)
     * [Cross site scripting](exploitation/web-application/xss.md)
     * [SQL injection](exploitation/web-application/sql-injection.md)
-    * [Remote code execution](exploitation/rce.md)
+    * [Remote code execution](exploitation/web-application/rce.md)
   * [Password cracking](exploitation/password-cracking.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)

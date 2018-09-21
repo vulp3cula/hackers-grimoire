@@ -64,7 +64,7 @@ Aggressive scan:
 nmap -A [host]
 ```
 
-**Warning:** Big, nasty scans are great for labs, but sometimes get rate-limited. In real life settings, it's even worse. Start with light scans and do targeted scans when you discover something interesting. 
+**Warning:** Big, nasty scans are great for labs, but sometimes get rate-limited. In real life settings, it's even worse. Start with light scans and do targeted scans when you discover something interesting.
 
 ### Nmap scripting engine \(NSE\)
 
@@ -163,37 +163,48 @@ Once the script has downloaded, use the following command to update the Nmap scr
 ```text
 nmap --script-updatedb
 ```
+
 ### Detecting WAF
-Web application firewalls (WAF) may drop malicious requests, such as those with SQL injections, or otherwise interfere with enumeration or testing:
+
+Web application firewalls \(WAF\) may drop malicious requests, such as those with SQL injections, or otherwise interfere with enumeration or testing:
 
 Detect WAF using NMAP:
-```
+
+```text
 nmap -p80 --script http-waf-detect [host]
 ```
+
 Fingerprint WAF using NMAP:
-```
+
+```text
 nmap -p80 --script http-waf-fingerprint [host]
 ```
+
 Fingerprint WAF using WAFw00f:
-```
+
+```text
 wafw00f.py [url]
 ```
+
 ### FTP
+
 Check if anonymous FTP access is available:
 
-```
+```text
 ftp [host]
 Username: anonymous
 Password: anything
 ```
+
 Test if you can navigate, list, read, get or put files:
-```
+
+```text
 cd ..          # move up one directory
 pwd            # print working directory
 dir -C         # list files
 mkdir [folder] # make a directory
 get [file]     # get a file
-put [file]     # send a file 
+put [file]     # send a file
 ```
 
 ## SMB
