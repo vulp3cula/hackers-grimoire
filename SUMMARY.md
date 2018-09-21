@@ -16,4 +16,5 @@
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
   * [Buffer overflow](post-exploitation/buffer-overflow.md)
+* [Learning resources](learning-resources.md)
 
