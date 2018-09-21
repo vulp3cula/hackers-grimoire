@@ -2,9 +2,7 @@
 
 ## Port and service scanning
 
-Finding live hosts on a network and is one of the first steps in network reconnaissance. Discovering as many live hosts as possible, including hidden ones, maximizes opportunities for exploitation.
-
-Being familiar with multiple tools and command options is helpful because network conditions vary and not all scans will return consistent results.
+The more you discover about a target, the more opportunities for exploitation you have. It's good to know how to use a variety of tools \(and a variety of options for each tool\) because network conditions may vary. 
 
 ### Netdiscover
 

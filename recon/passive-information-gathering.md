@@ -2,7 +2,7 @@
 
 ## DNS enumeration
 
-Domain Name System \(DNS\) enumeration is the process of identifying the DNS servers and records. DNS translates human-readable hostnames into machine-readable IP addresses.
+Domain Name System \(DNS\) enumeration is the process of identifying the DNS servers and records associated with a target.
 
 Important records for enumeration include:
 
@@ -72,7 +72,7 @@ host -t axfr -l google.com ns1.google.com
 
 ### Dig
 
-Dig \(short for Domain Information Groupr\) is a tool to query DNS servers that works like Host.
+Dig is pretty much like Host.
 
 Retrieve MX records for the google.com domain:
 
@@ -94,15 +94,13 @@ dig axfr @nsztm1.digi.ninja zonetransfer.me
 
 ### Fierce
 
-Fierce uses DNS to identify targets inside and outside corporate networks.
+Fierce tries to find name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist. 
 
 Type `fierce -h` for help \(this works for most things\):
 
 ```text
 fierce -dns google.com
 ```
-
-Fierce will attempt to locate the name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist. 
 
 To specify a custom wordlist:
 
