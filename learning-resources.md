@@ -1,5 +1,5 @@
 # Learning resources
-I've included website links in every section, but here's a list of other things I've found helpful for overall learning. Yes, there are lots of great video tutorials but I can't seem to watch videos because I zone out.
+I've included website links in every section, but here's a list of other things I've found helpful for overall learning. Yes, there are lots of great video tutorials but I can't seem to watch videos because I zone out, so you won't find any video recommendations here.
 
 ## Labs
 You can't really learn hacking without doing it. Books are great for theory, but you'll pick up techniques a lot faster by trying them out. You'll also learn a bunch of extra stuff unintentionally because things never work *exactly* like the documentation and extra research is usually required.
