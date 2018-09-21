@@ -30,6 +30,6 @@ Don't try to read this book cover to cover, you'll go insane. Instead, when you 
 [Advanced Penetration Testing: Hacking the World's Most Secure Networks](https://www.amazon.com/Advanced-Penetration-Testing-Hacking-Networks/dp/1119367689/)<br/>
 I started reading this book after I'd done some basic reverse shell and privesc stuff. All the cool kids were talking about C2s and moving laterally, and I just wanted to know how all the techniques fit together. This book explains the process in detail, but stays technology-agnostic because tools go out of date so quickly.
 
-[Deep Work: Rules for Focused Success in a Distracted World](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692)
+[Deep Work: Rules for Focused Success in a Distracted World](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692)<br/>
 This book will help you organize your time and environment to learn hard things quickly (hacking or otherwise). I'm already pretty disciplined, but I picked up some good tips. The main one: get away from social media.
 
