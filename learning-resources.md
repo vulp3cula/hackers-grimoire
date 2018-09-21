@@ -21,6 +21,9 @@ I passed Security+ a couple of months after I started working in cybersecurity, 
 ### [CompTIA Network+ Certification All-in-One Exam Guide, Seventh Edition](https://www.amazon.com/CompTIA-Network-Certification-Seventh-N10-007/dp/1260122387/)
 I didn't take the Network+ exam, but I read this book cover to cover while I was studying Security+, because a lot of OG hackers were saying the young whippersnappers didn't understand networking. Knowing networks is *fundamental* for mastering later concepts and tools quickly, such as service enumeration and nmap.
 
+### [The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
+This book was recommended to me while I was studying cryptography for Security+. It covers all the same concepts, but is *way* more interesting with historical context, especially the Enigma machine and the impact of quantum cryptography.
+
 ### [How Linux Works](https://www.amazon.com/How-Linux-Works-2nd-Superuser/dp/1593275676/)
 Don't try to read this book cover to cover, you'll go insane. Instead, when you start working on kernel exploits and other Linux privilege escalation techniques, flip to the relevant chapter and have a bunch of aha moments. That's what I did.
 
