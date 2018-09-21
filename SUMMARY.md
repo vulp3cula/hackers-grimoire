@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hacker's Grimoire](README.md)
+* [Noob Hacker's Grimoire](README.md)
 * [Reconnaissance](recon/README.md)
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
