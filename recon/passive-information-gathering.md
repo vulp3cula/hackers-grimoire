@@ -92,7 +92,7 @@ dig axfr @nsztm1.digi.ninja zonetransfer.me
 
 ### Fierce
 
-Fierce tries to find name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist. 
+Fierce tries to find name servers for the given domain and perform a zone transfer on each one. It also checks for a wildcard DNS record and guesses subdomains using an internal wordlist.
 
 Type `fierce -h` for help \(this works for most things\):
 
