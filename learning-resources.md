@@ -4,10 +4,10 @@ I've included website links in every section, but here's a list of other things 
 ## Labs
 You can't really learn hacking without doing it. Books are great for theory, but you'll pick up techniques a lot faster by trying them out. You'll also learn a bunch of extra stuff unintentionally because things never work *exactly* like the documentation and extra research is usually required. 
 
-[Virtual Hacking Labs](https://www.virtualhackinglabs.com/)
+### [Virtual Hacking Labs](https://www.virtualhackinglabs.com/)
 This is an amazing lab platform because you can go in barely knowing how to use Linux and come out with a lot of confidence and huge bag of hacking tricks. The textbook is great and the lab machines are diverse and interesting.
 
-[Hack The Box](https://www.hackthebox.eu/)
+### [Hack The Box](https://www.hackthebox.eu/)
 Another great site to practice hacking techniques, but I wouldn't recommend it for total noobs. After solving about 25 boxes on [VHL](https://www.virtualhackinglabs.com/), I felt pretty comfortable doing puzzles on HTB. And the points system is really addictive...
 
 ## Books
