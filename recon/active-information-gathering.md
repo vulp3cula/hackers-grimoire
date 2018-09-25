@@ -301,6 +301,7 @@ rpcclient -U "" [host]
 rpcclient $> querydominfo
 rpcclient $> enumdomusers
 rpcclient $> queryuser [username]
+rpcclient $> getdompwinfo
 ```
 
 The above commands return domain information, including users.
