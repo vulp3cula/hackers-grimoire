@@ -28,7 +28,7 @@ Nslookup \(Name Server lookup\) is used for querying the domain name system for 
 nslookup google.com
 ```
 
-Query DNS records using the option -type= followed by the DNS record type:
+Query DNS records using the option `-type=` followed by the DNS record type:
 
 ```text
 nslookup -type=A google.com
@@ -54,7 +54,7 @@ host google.com
 
 #### Zone transfers
 
-DNS servers usually have redundant/secondary servers which must be synced to each other. The replication method is called a **zone transfer**. DNS servers with zone transfers enabled to the public can reveal staging servers, business applications, VOIP servers and other assets which would not be discovered through brute force techniques. Zone transfers are typically disabled for DNS servers, but it is still worth checking.
+DNS servers usually have redundant/secondary servers which must be synced to each other. The replication method is called a **zone transfer**. DNS servers with zone transfers enabled to the public can reveal servers which would not be found by guessing. Zone transfers are typically disabled for DNS servers, but are still worth checking.
 
 Check for zone transfer capability using host, use this command to retrieve the name server:
 
@@ -108,7 +108,7 @@ fierce -dns google.com –wordlist /path/to/wordlist/
 
 #### Wildcard domains
 
-A Wildcard DNS record is a DNS record that will match any request when there is no record available that explicitly matches that request. The Wildcard DNS record is usually defined using an asterisk as the first label: `*.domain.com.`
+A Wildcard DNS record is a DNS record that will match any request when there is no record available that explicitly matches that request. The Wildcard DNS record is uses an asterisk as the first label: `*.domain.com.`
 
 For example:
 
@@ -122,9 +122,9 @@ test.domain.com    A      1.1.1.3
 *.domain.com       A      1.1.1.1
 ```
 
-Requesting the IP address for `www.domain.com` returns the IP 1.1.1.1. If we request the IP address for `vpn.domain.com` we will get 1.1.1.2 and so on. However, requesting the IP for a domain that is not explicitly defined, such as 8u1fc.domain.com, we will get the wildcard response of 1.1.1.1.
+Requesting the IP for a domain that is not explicitly defined, such as xw4647.domain.com will return the wildcard response of 1.1.1.1.
 
-Tools like Fierce will first make a request for an unlikely subdomain \(e.g sffvfdghdf9w3534.google.com\) before guessing common names from a wordlist. If a wildcard domain exists, then every guess can theoretically come back with a positive result, but Fierce is able to distinguish between wildcard and real results and discard them.
+Tools like Fierce will first make a request for an unlikely subdomain \(e.g sffvfdghdf9w3534.google.com\) before guessing common names from a wordlist to determine if wildcard domains are present.
 
 ### DNSenum
 
@@ -146,7 +146,7 @@ dnsrecon -d google.com
 
 ### Sublist3r
 
-Sublist3r is a tool written in Python for enumerating subdomains using popular search engines to discover subdomains for a selected domain name. It can also guess subdomains using an integrated tool named **Subbrute**, which uses a wordlist to enumerate DNS records and subdomains:
+Sublist3r enumerates subdomains using popular search engines to discover subdomains for a selected domain name. It can also guess subdomains using an integrated tool named **Subbrute**, which uses a wordlist to enumerate DNS records and subdomains:
 
 ```text
 sublist3r -d google.com
