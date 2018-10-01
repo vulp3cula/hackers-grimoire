@@ -23,7 +23,7 @@ find / -name cron*
 ```
 ## Basic Bash scripting
 
-### Filtering
+### Filter
 Being able to process text-based files and pull out useful data is a useful skill. For example, to filter out domain names from an HTML file full of other stuff, you can `grep` for something uniquely associated with URLs, then cut out extraneous information:
 
 ```
