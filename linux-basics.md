@@ -87,8 +87,17 @@ nc -nv [host] 110
 ### Reverse shell
 Listen for a reverse shell:
 ```
-nc -lvp 443
+nc -nlvp 443
 listening on [any] 443...
+```
+### Transfer files
+To transfer files, set up a listener and redirect the output to a filename:
+```
+nc -nlvp 443 > nc.exe # receiving machine
+listening on [any] 443...
+
+nc -nv [host] 443 < nc.exe # sending machine pushes file
+(UNKNOWN) [host] 443 (?) open
 ```
 
 ## Further reading
