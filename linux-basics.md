@@ -1,4 +1,5 @@
 # Linux basics
+Here's a list of commands and techniques I always forget.
 
 ## Finding things
 
@@ -64,3 +65,5 @@ Direct output to another command with `|`:
 ```
 grep "href=" file.html | cut -d "/" -f 3
 ```
+## Further reading
+* [Linux Journey](https://linuxjourney.com/)
