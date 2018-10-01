@@ -75,5 +75,21 @@ Direct output to another command with `|`:
 ```
 grep "href=" file.html | cut -d "/" -f 3
 ```
+## Netcat
+
+### Connect to a port
+Connect to an open TCP or UDP port (e.g. mail service) to see if it responds:
+```
+nc -nv [host] 110
+(UNKNOWN) [host] 110 (pop3) open
++OK POP3 server ready
+```
+### Reverse shell
+Listen for a reverse shell:
+```
+nc -lvp 443
+listening on [any] 443...
+```
+
 ## Further reading
 * [Linux Journey](https://linuxjourney.com/)
