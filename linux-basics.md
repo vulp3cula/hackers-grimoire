@@ -22,6 +22,15 @@ Search recursively through directories:
 ```
 find / -name cron*
 ```
+### Ls
+Dont use the basic command, always list directory contents showing owner and including `.` files like bash history:
+```
+ls -la
+-rw-------    1 joe  staff   6863 26 Sep 17:12 .bash_history
+-rw-r--r--    1 joe  staff    200 23 Jul 14:36 .bash_profile
+drwx------  129 joe  staff   4128  1 Oct 15:41 .bash_sessions
+```
+
 ## Basic Bash scripting
 This isn't even really Bash scripting, it's more about how to chain commands together to do useful things.
 
