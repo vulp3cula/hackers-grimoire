@@ -48,3 +48,18 @@ Grep the output of `host` to find successful lookups:
 for url in $(cat list.txt); do host $url; done | grep "has address" | cut -d " " -f 4 | sort -u
 ```
 In the above example, you're looking for lines with `has address`, filtering out the URL by using spaces as the delimiter and then removing duplicates with `sort`. 
+
+### Directing output
+
+Direct output to a file with `>`:
+```
+cat /root/key.txt > /tmp/key.txt
+```
+Append output to a file with `>>`:
+```
+cat /root/key.txt >> /tmp/key.txt
+```
+Direct output to another command with `|`:
+```
+grep "href=" file.html | cut -d "/" -f 3
+```
