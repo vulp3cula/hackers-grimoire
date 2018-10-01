@@ -1,5 +1,5 @@
 # Linux basics
-Here's a list of commands and techniques I always forget.
+A list of commands and techniques that are useful for getting around the file system and enumerating. I'm writing them down because they're easy to forget or mix up.
 
 ## Finding things
 
