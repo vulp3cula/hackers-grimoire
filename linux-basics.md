@@ -22,6 +22,7 @@ Search recursively through directories:
 find / -name cron*
 ```
 ## Basic Bash scripting
+This isn't even really Bash scripting, it's more about how to chain commands together to do useful things.
 
 ### Filter
 Being able to process text-based files and pull out useful data is a useful skill. For example, to filter out domain names from an HTML file full of other stuff, you can `grep` for something uniquely associated with URLs, then cut out extraneous information:
