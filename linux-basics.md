@@ -30,6 +30,7 @@ Being able to process text-based files and pull out useful data is a useful skil
 
 ```
 <li><a href="http://newsroom.cisco.com/">Newsroom</a></li> # links you'd find in HTML
+
 grep "href=" file.html | cut -d "/" -f 3
 ```
 In the above example, we are grepping for `href=` which identifies hyperlinks in HTML. We can filter more precisely by looking for recurring characters that help us divide the data into smaller chunks. The command `cut -d "/"` chunks the data and separates it by `/`. The `-f 3` option tells us to filter out the 3rd chunk (field) of data. 
