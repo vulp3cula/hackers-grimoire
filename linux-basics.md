@@ -23,7 +23,7 @@ Search recursively through directories:
 find / -name cron*
 ```
 ### Ls
-Dont use the basic command, always list directory contents showing owner and including `.` files like bash history:
+Never use the basic command, always list directory contents showing owner and including dot files like `bash_history`:
 ```
 ls -la
 -rw-------    1 joe  staff   6863 26 Sep 17:12 .bash_history
