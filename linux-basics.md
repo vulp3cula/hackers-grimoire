@@ -159,6 +159,22 @@ nc -nv [host] 443 < nc.exe # sending machine pushes file
 (UNKNOWN) [host] 443 (?) open
 ```
 
+## Ncat
+
+It's like netcat, but can encrypt connections and restrict access. 
+
+Taking the example of Bob \(Windows\) setting up a bind shell so that only Alice \(Linux\) could connect to it via SSL, his listener would look like this:
+
+```text
+ncat --exec cmd.exe --allow [alice] -vnl 443 --ssl
+```
+
+Alice would connect securely to Bob:
+
+```text
+ncat -v [bob] 443 --ssl
+```
+
 ## Further reading
 
 * [Linux Journey](https://linuxjourney.com/)
