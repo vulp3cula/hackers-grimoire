@@ -24,6 +24,12 @@ Host discovery \(ping scan\):
 nmap -sn 192.168.1.1/24
 ```
 
+Host discovery \(specific range\): 
+
+```text
+nmap -sP 192.168.1.1-100
+```
+
 Nmap also has the `-Pn` option which will disable the host discovery stage altogether on a scan. This option can be useful when the target is reported as down when it’s actually up but not responding to host discovery probes \(e.g. due to host-based firewall that drops ICMP packets\). Using this option with the intense scans below can be helpful.
 
 TCP connect scan:
