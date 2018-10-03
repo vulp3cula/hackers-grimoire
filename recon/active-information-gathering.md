@@ -211,6 +211,17 @@ get [file]     # get a file
 put [file]     # send a file
 ```
 
+## SMTP
+
+You can connect to an SMTP server with netcat and run the `vrfy` command to check if email addresses are valid. You can also check mailing list membership with `expn`.
+
+```text
+nc -nv [host] 25
+(UNKNOWN) [host] 25 (smtp) open
+VRFY root
+250 2.1.5 root <root@host.com>
+```
+
 ## SMB
 
 Server Message Block \(SMB\) is a network file sharing protocol that provides access to shared files and printers on a local network. Older versions of SMB tend to be vulnerable to major exploits, such as EternalBlue.
