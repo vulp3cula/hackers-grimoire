@@ -365,9 +365,6 @@ snmpwalk -c public -v1 [host]
 Enumerate the entire MIB tree:
 ```
 snmpwalk -c public -v1 [host]
-iso.3.6.1.2.1.1.1.0 = STRING: "Linux ubuntu 3.2.0-23-generic #36-Ubuntu SMP "
-iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
-iso.3.6.1.2.1.1.3.0 = Timeticks: (66160) 0:11:01.60
 ```
 Enumerate based on a single object ID:
 ```
