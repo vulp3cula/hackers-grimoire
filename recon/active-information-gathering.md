@@ -346,10 +346,54 @@ enum4linux [host]
 ## SNMP
 Simple Network Management Protocol (SNMP) an older UDP-based protocol that is often vulnerable. They are commonly left in default configurations which can reveal a lot of network information.
 
-The SNMP Management Information Base (MIB) is a database containing network management information organized in a tree of functions. Useful functions for enumeration include: 
+The SNMP Management Information Base (MIB) is a database containing network management information organized in a tree of functions. 
 
-Value | Function
-===== | ========
+### OneSixtyOne
+OneSixtyOne brute forces community strings based on dictionary and the target IP address. You can also provide a list of host IP addresses to be scanned by onesixtyone using the -i option. Single values can be passed via the command line.
+
+```
+onesixtyone -c [community list] -i [host list]
+```
+### SNMPwalk
+SNMPwalk queries MIB values to retrieve information about managed devices. It requires a valid SNMP read-only community string.
+
+To run SNMPwalk with the default community string ‘public’ on an SNMPv1 device:
+
+```
+snmpwalk -c public -v1 [host]
+````
+Enumerate the entire MIB tree:
+```
+snmpwalk -c public -v1 [host]
+iso.3.6.1.2.1.1.1.0 = STRING: "Linux ubuntu 3.2.0-23-generic #36-Ubuntu SMP "
+iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
+iso.3.6.1.2.1.1.3.0 = Timeticks: (66160) 0:11:01.60
+```
+Enumerate based on a single object ID:
+```
+snmpwalk -c public -v1 [host] [OID]
+```
+Enumerate Windows users:
+```
+snmpwalk -c public -v1 10.11.1.204 1.3.6.1.4.1.77.1.2.25
+```
+Enumerate running Windows processes:
+```
+snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.4.2.1.2
+```
+Enumerate open TCP ports:
+```
+snmpwalk -c public -v1 [host] 1.3.6.1.2.1.6.13.1.3
+```
+Enumerate installed software:
+```
+root@kali:~# snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.6.3.1.2
+```
+#### Object IDs
+Some useful ones:
+
+Object ID | Function | 
+| :--- | :--- |
 1.3.6.1.2.1.25.1.6.0 | System Processes
 1.3.6.1.2.1.25.4.2.1.2 | Running Programs
 1.3.6.1.2.1.25.4.2.1.4 | Processes Path
