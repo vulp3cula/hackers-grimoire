@@ -98,3 +98,21 @@ To execute:
 powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1
 ```
 
+### Debug.exe
+
+On windows 32 bit machines, it is possible to use `debug.exe` to transfer programs. It is used to inspect binaries, like a debugger, but can also rebuild them from hex. For example, a binary like `nc.exe` can be disassembled into hex, pasted into a file on the victim machine, and then assembled with `debug.exe`.
+
+`Debug.exe` can only assemble 64 kb, use upx to compress the executable:
+
+```text
+upx -9 nc.exe
+```
+
+To disassemble:
+
+```text
+wine exe2bat.exe nc.exe nc.txt
+```
+
+Pasting that into the Windows shell will create nc.exe
+
