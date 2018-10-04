@@ -2,7 +2,7 @@
 
 ## Port and service scanning
 
-The more you discover about a target, the more opportunities for exploitation you have. It's good to know how to use a variety of tools \(and a variety of options for each tool\) because network conditions may vary. 
+The more you discover about a target, the more opportunities for exploitation you have. It's good to know how to use a variety of tools \(and a variety of options for each tool\) because network conditions may vary.
 
 ### Netdiscover
 
@@ -24,7 +24,7 @@ Host discovery \(ping scan\):
 nmap -sn 192.168.1.1/24
 ```
 
-Host discovery \(specific range\): 
+Host discovery \(specific range\):
 
 ```text
 nmap -sP 192.168.1.1-100
@@ -311,7 +311,7 @@ nmap -p 445 [host] --script=smb-vuln-ms17-010
 
 ### Rpcclient
 
-Rpcclient is a Linux tool used for client-side MS-RPC functions \(port 445\) using a null session, a connection that does not require a password. Null sessions were enabled by default on legacy systems but have since been disabled from Windows XP SP2 and Windows Server 2003. 
+Rpcclient is a Linux tool used for client-side MS-RPC functions \(port 445\) using a null session, a connection that does not require a password. Null sessions were enabled by default on legacy systems but have since been disabled from Windows XP SP2 and Windows Server 2003.
 
 ```text
 rpcclient -U "" [host]
@@ -344,60 +344,71 @@ enum4linux [host]
 ```
 
 ## SNMP
-Simple Network Management Protocol (SNMP) an older UDP-based protocol that is often vulnerable. They are commonly left in default configurations which can reveal a lot of network information.
 
-The SNMP Management Information Base (MIB) is a database containing network management information organized in a tree of functions. 
+Simple Network Management Protocol \(SNMP\) an older UDP-based protocol that is often vulnerable. They are commonly left in default configurations which can reveal a lot of network information.
+
+The SNMP Management Information Base \(MIB\) is a database containing network management information organized in a tree of functions.
 
 ### OneSixtyOne
+
 OneSixtyOne brute forces community strings based on dictionary and the target IP address. You can also provide a list of host IP addresses to be scanned by onesixtyone using the -i option. Single values can be passed via the command line.
 
-```
+```text
 onesixtyone -c [community list] -i [host list]
 ```
+
 ### SNMPwalk
+
 SNMPwalk queries MIB values to retrieve information about managed devices. It requires a valid SNMP read-only community string.
 
 To run SNMPwalk with the default community string ‘public’ on an SNMPv1 device:
 
-```
+```text
 snmpwalk -c public -v1 [host]
-````
+`
+```
+
 Enumerate the entire MIB tree:
-```
+
+```text
 snmpwalk -c public -v1 [host]
 ```
+
 Enumerate based on a single object ID:
-```
+
+```text
 snmpwalk -c public -v1 [host] [OID]
 ```
+
 Enumerate Windows users:
-```
+
+```text
 snmpwalk -c public -v1 10.11.1.204 1.3.6.1.4.1.77.1.2.25
 ```
+
 Enumerate running Windows processes:
-```
+
+```text
 snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.4.2.1.2
 ```
+
 Enumerate open TCP ports:
-```
+
+```text
 snmpwalk -c public -v1 [host] 1.3.6.1.2.1.6.13.1.3
 ```
+
 Enumerate installed software:
-```
+
+```text
 root@kali:~# snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.6.3.1.2
 ```
+
 #### Object IDs
+
 Some useful ones:
 
-Object ID | Function | 
-| :--- | :--- |
-1.3.6.1.2.1.25.1.6.0 | System Processes
-1.3.6.1.2.1.25.4.2.1.2 | Running Programs
-1.3.6.1.2.1.25.4.2.1.4 | Processes Path
-1.3.6.1.2.1.25.2.3.1.4 | Storage Units
-1.3.6.1.2.1.25.6.3.1.2 | Software Name
-1.3.6.1.4.1.77.1.2.25 | User Accounts
-1.3.6.1.2.1.6.13.1.3 | TCP Local Ports
+Object ID \| Function \| \| :--- \| :--- \| 1.3.6.1.2.1.25.1.6.0 \| System Processes 1.3.6.1.2.1.25.4.2.1.2 \| Running Programs 1.3.6.1.2.1.25.4.2.1.4 \| Processes Path 1.3.6.1.2.1.25.2.3.1.4 \| Storage Units 1.3.6.1.2.1.25.6.3.1.2 \| Software Name 1.3.6.1.4.1.77.1.2.25 \| User Accounts 1.3.6.1.2.1.6.13.1.3 \| TCP Local Ports
 
 ## Website scanning
 

