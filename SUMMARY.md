@@ -2,6 +2,7 @@
 
 * [Hacker's Grimoire](README.md)
 * [Linux basics](linux-basics.md)
+* [Windows basics](windows-basics.md)
 * [Reconnaissance](recon/README.md)
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
