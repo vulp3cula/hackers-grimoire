@@ -6,7 +6,7 @@ Why is this so much harder in Windows? I don't know.
 
 ## FTP
 
-Even though many Windows versions have FTP clients, we can't use them interactively because it will kill shells. But we can run multiple commands from a file:  
+Even though many Windows versions have FTP clients, we can't use them interactively because it will kill shells. But we can run multiple commands from a file and download them from an FTP server like `pure-ftpd`on the attack machine.
 
 On the victim machine, echo the following commands into a file:
 
