@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Hacker's Grimoire](README.md)
-* [Linux basics](linux-basics.md)
-* [Windows basics](windows-basics.md)
 * [Reconnaissance](recon/README.md)
   * [Passive information gathering](recon/passive-information-gathering.md)
   * [Active information gathering](recon/active-information-gathering.md)
@@ -18,5 +16,7 @@
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
   * [Buffer overflow](post-exploitation/buffer-overflow.md)
+* [Linux basics](linux-basics.md)
+* [Windows basics](windows-basics.md)
 * [Learning resources](learning-resources.md)
 
