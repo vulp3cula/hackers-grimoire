@@ -234,4 +234,6 @@ scp -r /path/to/source/dir username@host:/path/to/destination
 ## Further reading
 
 * [Linux Journey](https://linuxjourney.com/)
+* Netcat options
+* [Ncat options](https://nmap.org/book/ncat-man-options-summary.html)
 
