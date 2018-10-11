@@ -28,7 +28,7 @@ which gcc
 Search recursively through directories:
 
 ```text
-find / -name cron*
+find / -name "cron*"
 ```
 
 ### Ls
