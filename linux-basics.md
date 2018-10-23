@@ -270,6 +270,17 @@ xtightvncviewer 127.0.0.1:5901
 ```
 So the first command instructs SSH to forward any connections from your machine's local port `5901` to `127.0.0.1:5901` on the remote host. Because of this tunnel, the second command lets you connect VNC service as if you were on the same server.
 
+Here's [another example](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) using different local and remote ports: let's say you have PostgreSQL running on a remote server which can only be accessed from `localhost` on port `5432`. 
+
+To forward connections from your local port `9000` to `localhost:5432` on the remote server:
+
+```
+ssh -L 9000:localhost:5432 username@[host]
+```
+Then you would access the PostgreSQL admin console using this command, as if you were on the remote server:
+```
+psql -h localhost -p 9000
+```
 
 ### Bypassing restricted shells
 
