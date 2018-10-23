@@ -257,7 +257,7 @@ Port forwarding can be tricky to understand, even with examples. There is a reti
 
 But I still don't entirely get it, even though I've used the technique a few times. So maybe this section is wrong, lol. 
 
-Sometimes a service can only be accessed locally, for security reasons. The port might be open, but it will not accept remote connections. Let's say you have VNC running on a remote server and listening on the loopback interface (allows client software to communicate with server software on the same computer, usually with IP address 127.0.0.1 or `localhost`). You'll want to have connections on your local machine's local port `5901` forwarded to the server loopback interface on the port that the VNC service is listening to: `127.0.0.1:5901`. 
+Sometimes a service can only be accessed locally, for security reasons. The port might be open, but it will not accept remote connections. Let's say you have VNC running on a remote server and listening on the loopback interface (allows client software to communicate with server software on the same computer, usually with IP address 127.0.0.1 or `localhost`). To access this local-only service from a remote machine, you'll need to have connections on your local machine's local port `5901` forwarded to the server's loopback interface + listening port for VNC: `127.0.0.1:5901`. 
 
 This is the SSH command to forward your local port to the remote host's loopback interface:
 ```
