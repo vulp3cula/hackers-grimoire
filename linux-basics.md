@@ -263,7 +263,7 @@ This is the SSH command to forward your local port to the remote host's loopback
 ```
 ssh -L 5901:127.0.0.1:5901 username@[host]
 ```
-Once that connection is established, open a second terminal window and connect to the remote VNC service as if you were on the local box:
+Once that connection is established, open a second terminal window and connect to the remote VNC service as if you were on the same box:
 
 ```
 xtightvncviewer 127.0.0.1:5901
