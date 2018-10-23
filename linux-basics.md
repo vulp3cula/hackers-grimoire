@@ -254,7 +254,7 @@ If you find a private key in a victim machine \(usually in `home/user/.ssh/id_rs
 
 ### Bypassing restricted shells
 
-There are [many options if you end up in a restricted shell](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells), ssh is one method of bypassing restrictions.
+SSH is one method of bypassing restricted shells (see Further Reading for more). 
 
 SSH in using a key, but without loading the restricted profile:
 
@@ -273,4 +273,5 @@ ssh -i keyfile username@[host] -t "/bin/sh"
 * [Linux Journey](https://linuxjourney.com/)
 * [Netcat options](https://resources.infosecinstitute.com/netcat-uses/)
 * [Ncat options](https://nmap.org/book/ncat-man-options-summary.html)
+* [Bypassing restricted shells](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells)
 
