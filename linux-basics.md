@@ -268,8 +268,7 @@ Once that connection is established, open a second terminal window and connect t
 ```
 xtightvncviewer 127.0.0.1:5901
 ```
-Recall that the earlier command already instructed SSH to forward any connections from your machine's local port `5901` to `127.0.0.1:5901` so this is how you can access the VNC service as if you were on the same server.
-
+So the first command instructs SSH to forward any connections from your machine's local port `5901` to `127.0.0.1:5901` on the remote host. Because of this tunnel, the second command lets you connect VNC service as if you were on the same server.
 
 
 ### Bypassing restricted shells
