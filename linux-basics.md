@@ -252,6 +252,25 @@ ssh -i /root/Desktop/keyfile username@[host]
 
 If you find a private key in a victim machine \(usually in `home/user/.ssh/id_rsa`\) you can paste the keyfile contents into a text file on your local machine, set the right permissions with `chmod 600` and ssh in with it.
 
+### Local port forwarding
+Port forwarding can be tricky to understand, even with examples. There is a retired machine called Poison on Hack the Box which uses port forwarding. Reading some of the walkthroughs and attempting to exploit the machine does make things clearer. 
+
+But I still don't entirely get it, even though I've used the technique a few times. So maybe this section is wrong, lol. 
+
+Sometimes a service can only be accessed locally, for security reasons. The port might be open, but it will not accept remote connections. Let's say you have VNC running on a remote server and listening on the loopback interface (allows client software to communicate with server software on the same computer, usually with IP address 127.0.0.1 or `localhost`). You'll want to have connections on your local machine's local port `5901` forwarded to the server loopback interface on the port that the VNC service is listening to: `127.0.0.1:5901`. 
+
+This is the SSH command to forward your local port to the remote host's loopback interface:
+```
+ssh -L 5901:127.0.0.1:5901 username@[host]
+```
+Once that connection is established, open a second terminal window and connect to the remote VNC service as if you were on the local box:
+
+```
+xtightvncviewer 127.0.0.1:5901
+```
+
+
+
 ### Bypassing restricted shells
 
 SSH is one method of bypassing restricted shells (see Further Reading for more). 
