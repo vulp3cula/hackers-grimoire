@@ -230,6 +230,32 @@ Copy a directory:
 ```text
 scp -r /path/to/source/dir username@host:/path/to/destination
 ```
+## SSH
+SSH is surprisingly powerful and does way more than simply connecting you to remote machines.
+
+### Basic usage
+SSH with a username:
+```
+ssh username@[host]
+```
+SSH with a private key:
+```
+cd Desktop
+ssh -i /root/Desktop/keyfile username@[host]
+```
+If you find a private key in a victim machine (usually in `home/user/.ssh/id_rsa`) you can paste the keyfile contents into a text file on your local machine, set the right permissions with `chmod 600` and ssh in with it.
+
+### Bypassing restricted shells
+There are [many options if you end up in a restricted shell](https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells), ssh is one method of bypassing restrictions. 
+
+SSH in using a key, but without loading the restricted profile:
+```
+ssh -i keyfile username@[host] -t "bash --noprofile"
+```
+SSH in, but execute some commands before the remote shell is created:
+```
+ssh -i keyfile username@[host] -t "/bin/sh"
+```
 
 ## Further reading
 
