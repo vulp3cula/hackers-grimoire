@@ -459,7 +459,7 @@ c – Remote Source Inclusion
 x – Reverse Tuning Options (i.e., include all except specified)
 ```
 
-### Dir
+### Dirb
 
 DIRB is a web content scanner that guesses web objects using a dictionary.
 
