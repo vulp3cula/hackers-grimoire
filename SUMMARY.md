@@ -13,6 +13,7 @@
     * [Remote code execution](exploitation/web-application/rce.md)
   * [Password cracking](exploitation/password-cracking.md)
   * [Working with exploits](exploitation/working-with-exploits.md)
+  * [Metasploit](exploitation/metasploit.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
