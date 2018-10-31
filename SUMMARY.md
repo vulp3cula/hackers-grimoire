@@ -18,7 +18,6 @@
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
   * [Antivirus evasion](post-exploitation/antivirus.md)
-  * [Buffer overflow](post-exploitation/buffer-overflow.md)
 * [Linux basics](linux-basics.md)
 * [Windows basics](windows-basics.md)
 * [Learning resources](learning-resources.md)
