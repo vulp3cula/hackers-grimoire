@@ -14,7 +14,7 @@
   * [Password cracking](exploitation/password-cracking.md)
   * [Working with exploits](exploitation/working-with-exploits.md)
   * [Metasploit](exploitation/metasploit.md)
-  * [Antivirus evasion](post-exploitation/antivirus.md)
+  * [Antivirus evasion](exploitation/antivirus.md)
 * [Post exploitation](post-exploitation/README.md)
   * [Privilege escalation: Linux](post-exploitation/privesc-linux.md)
   * [Privilege escalation: Windows](post-exploitation/privesc-windows.md)
