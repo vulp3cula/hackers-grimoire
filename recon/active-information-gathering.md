@@ -417,7 +417,7 @@ snmpwalk -c public -v1 [host] 1.3.6.1.2.1.6.13.1.3
 Enumerate installed software:
 
 ```text
-root@kali:~# snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.6.3.1.2
+snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.6.3.1.2
 ```
 
 ## Website scanning
