@@ -420,12 +420,6 @@ Enumerate installed software:
 root@kali:~# snmpwalk -c public -v1 [host] 1.3.6.1.2.1.25.6.3.1.2
 ```
 
-#### Object IDs
-
-Some useful ones:
-
-Object ID \| Function \| \| :--- \| :--- \| 1.3.6.1.2.1.25.1.6.0 \| System Processes 1.3.6.1.2.1.25.4.2.1.2 \| Running Programs 1.3.6.1.2.1.25.4.2.1.4 \| Processes Path 1.3.6.1.2.1.25.2.3.1.4 \| Storage Units 1.3.6.1.2.1.25.6.3.1.2 \| Software Name 1.3.6.1.4.1.77.1.2.25 \| User Accounts 1.3.6.1.2.1.6.13.1.3 \| TCP Local Ports
-
 ## Website scanning
 
 Web servers are a common target for hackers, because they can be used to get a foothold on the system \(e.g. shell\) or even an organization's network. Scanning is usually detectable, but also can identify opportunities for further exploitation.
