@@ -316,12 +316,13 @@ Rpcclient is a Linux tool used for client-side MS-RPC functions \(port 445\) usi
 ```text
 rpcclient -U "" [host]
 rpcclient $> querydominfo
+rpcclient $> srvinfo
 rpcclient $> enumdomusers
 rpcclient $> queryuser [username]
 rpcclient $> getdompwinfo
 ```
 
-The above commands return domain information, including users.
+The above commands return domain information, including users. More [enumeration commands are available here](https://bitvijays.github.io/LFF-IPS-P3-Exploitation.html).
 
 ### Enum4Linux
 
