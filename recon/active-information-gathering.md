@@ -324,9 +324,18 @@ rpcclient $> getdompwinfo
 
 The above commands return domain information, including users. More [enumeration commands are available here](https://bitvijays.github.io/LFF-IPS-P3-Exploitation.html).
 
+Take special note of the `srvinfo` response, because googling it may give you the exact exploit you need. It looks like gibberish:
+
+```text
+	HOSTNAME            Wk Sv PrQ Unx NT SNT Samba Server
+	platform_id     :	500
+	os version      :	4.9
+	server type     :	0x9a03
+```
+
 ### Enum4Linux
 
-Enum4linux is used to enumerate data from Windows and Samba hosts:
+Enum4linux is used to enumerate data from Windows and Samba hosts. It's really helpful if you aren't that familiar with SMB commands because it can pull a lot of information out quickly:
 
 ```text
 enum4linux [host]
@@ -342,6 +351,12 @@ enum4linux [host]
 -a        Do all simple enumeration (-U -S -G -P -r -o -n -i).
 -o        Get OS information
 -i        Get printer information
+```
+
+It will also pull OS information via `srvinfo` that is helpful when searching for exploits:
+
+```text
+HOSTNAME    Wk Sv PrQ Unx NT SNT Samba Server	
 ```
 
 ## SNMP
