@@ -327,10 +327,10 @@ The above commands return domain information, including users. More [enumeration
 Take special note of the `srvinfo` response, because googling it may give you the exact exploit you need. It looks like gibberish:
 
 ```text
-	HOSTNAME            Wk Sv PrQ Unx NT SNT Samba Server
-	platform_id     :	500
-	os version      :	4.9
-	server type     :	0x9a03
+    HOSTNAME            Wk Sv PrQ Unx NT SNT Samba Server
+    platform_id     :    500
+    os version      :    4.9
+    server type     :    0x9a03
 ```
 
 ### Enum4Linux
@@ -356,7 +356,7 @@ enum4linux [host]
 It will also pull OS information via `srvinfo` that is helpful when searching for exploits:
 
 ```text
-HOSTNAME    Wk Sv PrQ Unx NT SNT Samba Server	
+HOSTNAME    Wk Sv PrQ Unx NT SNT Samba Server
 ```
 
 ## SNMP
