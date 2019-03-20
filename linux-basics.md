@@ -304,6 +304,28 @@ SSH in, but execute some commands before the remote shell is created:
 ssh -i keyfile username@[host] -t "/bin/sh"
 ```
 
+### Debian SSH vulnerability
+
+There's a famous vulnerability for old Debian-based systems \(2006-2008, CVE-2008-0166\) which basically makes the number of possible SSH keys small and predictable. [Repositories of weak keys have been generated](https://github.com/g0tmi1k/debian-ssh) and can be searched if you happen to find an `authorized_keys` file. Using the string in that file, go into the corresponding folder of weak keys \(DSA or RSA, choose the right one!\) and grep for the public key: 
+
+```text
+grep -lr AAAAB3NzaC1kc3M[snip] *.pub
+```
+
+If that key is vulnerable, it will return a public key file like this:
+
+```text
+f1f[snip]-16858.pub
+```
+
+Each public key in the weak key repository has a corresponding private key with the same filename. Copy it out and `chmod 700` so that you can use it with ssh. It's very likely you'll need to update your local ssh config file `/home/user/ssh/ssh_config` with some ancient stuff to connect successfully, like this:
+
+```text
+PubkeyAcceptedKeyTypes=+ssh-dss
+```
+
+If it's still not working, add the `-vvv` debug parameter to your SSH command and google the error messages. There is also a [good walkthrough of the whole process](https://zsahi.wordpress.com/2018/05/16/pwnos-1-0-boot2root-vm-walkthrough/) with a downloadable [Vulnhub machine](https://www.vulnhub.com/entry/pwnlab-init,158/) for practice.
+
 ## Further reading
 
 * [Linux Journey](https://linuxjourney.com/)
