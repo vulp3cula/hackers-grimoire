@@ -471,7 +471,7 @@ x – Reverse Tuning Options (i.e., include all except specified)
 
 ### Dirb
 
-DIRB is a web content scanner that guesses web objects using a dictionary.
+Dirb is a web content scanner that guesses web objects using a dictionary.
 
 ```text
 dirb [http://host]
@@ -482,6 +482,14 @@ It can also use a custom wordlist if one is provided:
 ```text
 dirb [http://host] [wordlist]
 ```
+
+Wordlists are located here:
+
+```text
+/usr/share/wordlists/dirb/
+```
+
+By default, dirb will use `common.txt` which works well in most lab situations. However, if you're enumerating a machine with a very small attack surface \(e.g. only port 80 is open\) you may want to try `big.txt` instead.
 
 ### Dirbuster
 
