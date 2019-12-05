@@ -10,6 +10,7 @@
     * [File upload bypass](exploitation/web-application/file-upload-bypass.md)
     * [Cross-site scripting](exploitation/web-application/xss.md)
     * [Cross-site request forgery](exploitation/web-application/csrf.md)
+    * [Server-side request forgery](exploitation/web-application/ssrf.md)
     * [SQL injection](exploitation/web-application/sql-injection.md)
     * [Remote code execution](exploitation/web-application/rce.md)
   * [Working with exploits](exploitation/working-with-exploits.md)
